@@ -1,0 +1,83 @@
+@import "../variables.scss";
+
+#sign-in-header{
+    color: $appColor;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#loginPanel{
+    border: 1px solid hsl(0, 0%, 85%);
+    box-shadow: 0 0 3px hsl(0,0%,85%);
+    background: color-mix(in srgb, $appColor, transparent 93%);
+    border-radius: 8px;
+    margin: 0 auto;
+    min-width: 40ch;
+    max-width: 20rem;
+    width: 60%;
+    padding: 10px 0;
+
+    .loginPanelItem{
+        display: block;
+        height: 2em;
+        width: 40ch;
+    }
+
+    //Text boxes
+    .loginInput{
+        margin: 10px auto;
+        border-radius: 15px;
+        padding: 5px 8px;
+        background: #fff;
+        border: 2px solid color-mix(in srgb, $appColor, transparent 10%);
+        
+        &:focus-visible{
+            border-color: $appColor;
+            outline: none;
+            box-shadow: 0 0 3px $appColor;
+        }
+
+        &::placeholder{
+            color: rgb(0,0,0,0.7);
+        }
+    }
+    //Error Message
+    .error-message{
+        display: block;
+        width: fit-content;
+        margin: 15px auto 0 auto;
+        padding: 5px;
+        border-radius: 4px;
+        color: #fff;
+        background: #f00;
+        box-shadow: 0 0 3px #f00;
+    }
+
+    //Panel Buttons
+    .panel-button{
+        background: $appColor;
+        color: #fff;
+        transition: background .25s;
+        border: 2px solid transparent;
+        
+        &:hover{
+            border: 2px solid $appColor;
+            background: #fff;
+            color: $appColor;
+        }
+    }
+    .login-submit{
+        margin: 20px auto 0 auto;
+        border-radius: 15px;
+    }
+
+    .panelBottom{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .link-button{
+        margin-left: 10px;
+        border-radius: 4px;
+        padding: 5px;
+    }
+}
